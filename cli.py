@@ -17,7 +17,7 @@ def get_api():
 	dict_data = deep_layer(data_json)
 	print (data_json)
 
-get_api()
+
 if __name__ == '__main__':
-	None
+	get_api()
 
