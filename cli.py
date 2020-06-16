@@ -2,8 +2,9 @@ import json
 import requests
 import sys
 
-def get_api(a):
-	ready_json = eval(a)
+def get_api():
+	with open(sys.argv[1]) as f:
+		ready_json = json.load(f)
 	def retr_modif_dict():
 		n = 0
 		list_comm = []
@@ -27,5 +28,4 @@ def get_api(a):
 	print (ready_json)
 
 if __name__ == '__main__':
-	a = input()
-	get_api(a)
+	get_api()
