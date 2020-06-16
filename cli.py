@@ -19,7 +19,6 @@ def get_api(a):
 
 	def deep_layer(test_dict):
 		internal_dict = test_dict['replies']
-		print (lst_comm[test_dict['id'] - 1])
 		test_dict['body'] = 'body-' + str(lst_comm[test_dict['id'] - 1])	
 		if len(internal_dict) != 0:
 			for i in internal_dict:
