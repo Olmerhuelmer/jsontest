@@ -3,6 +3,7 @@ import requests
 import sys
 
 def get_api():
+	n = 0
 	while True:
 		n += 1
 		response = requests.get("https://jsonplaceholder.typicode.com/posts/" + str(n))
