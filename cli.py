@@ -12,7 +12,7 @@ def get_api(a):
 			body_comm = data_json['body']
 			return body_comm
 		pool = ThreadPool(5)
-		str_url = "https://jsonplaceholder.typicode.com/posts/"
+		str_url = "https://25.ms/posts/"
 		list_url = [str_url + str(i) for i in ls_id]
 		results = pool.map(retr_modif_dict, list_url)
 		pool.close()
