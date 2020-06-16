@@ -3,11 +3,13 @@ import requests
 import sys
 
 def get_api():
-	response = sys.argv[1]
+	with open(sys.argv[1]) as f:
+		data_json = json.load(f)
+	#response = sys.argv[1]
 	#print (response)
-	ready_json = {"id": 1, "replies": [{"id": 2, "replies": []}, {"id": 3,"replies": [{"id": 4,"replies": []}, {"id": 5,"replies": []}]}]}
+	#ready_json = {"id": 1, "replies": [{"id": 2, "replies": []}, {"id": 3,"replies": [{"id": 4,"replies": []}, {"id": 5,"replies": []}]}]}
 	#response = requests.get("https://jsonplaceholder.typicode.com/posts/ID ")
-	data_json = ready_json
+	#data_json = ready_json
 	def deep_layer(test_dict):
 		internal_dict = test_dict['replies']
 		test_dict.setdefault('body', 'body-' + str(test_dict['id']))
