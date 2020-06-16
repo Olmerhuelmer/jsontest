@@ -18,4 +18,6 @@ def get_api():
 	print (data_json)
 
 get_api()
+if __name__ == '__main__':
+	None
 
