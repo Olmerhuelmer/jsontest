@@ -19,7 +19,7 @@ def get_api(a):
 			for i in internal_dict:
 				deep_layer(i)
 	dict_data = deep_layer(ready_json)
-	print (ready_json)
+	print (json.dumps(ready_json))
 
 if __name__ == '__main__':
 	def red_full_json():
@@ -28,7 +28,6 @@ if __name__ == '__main__':
 			while True:
 				a = input()
 				b += a
-				#print (b,' g')
 		except EOFError:
 			c = b
 		return eval(c)
